@@ -1,0 +1,16 @@
+node_modules/
+public/build/
+deployment/tools/*
+styleguide/build/
+.DS_STORE
+npm-debug.log.*
+.idea/*
+!.idea/codeStyleSettings.xml
+!.idea/typescript-compiler.xml
+!.idea/inspectionProfiles
+!.idea/jsLibraryMappings.xml
+!.idea/misc.xml
+!.idea/runConfigurations
+!.idea/libraries
+*.orig
+npm-debug.log

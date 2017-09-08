@@ -1,0 +1,33 @@
+.article {
+  &__title {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: #8a0000 solid 2px;
+
+    color: @red;
+    font-size: 36px;
+    font-family: Cambria serif;
+    text-decoration: none;
+
+    &--has-children {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    color: @red;
+
+    h3 {
+      font-weight: 800;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    ul,
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

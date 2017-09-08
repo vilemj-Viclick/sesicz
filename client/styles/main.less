@@ -1,0 +1,49 @@
+@import "normalize";
+
+
+@orange: #ffbd00;
+@red: #a80000;
+
+body {
+  background-color: @red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-align: justify
+}
+
+
+a {
+  cursor: pointer;
+}
+
+
+table,
+td,
+tr {
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+
+@import "components/main-table";
+@import "components/inner-table";
+@import "components/main-menu";
+@import "components/submenu";
+@import "components/third-level-menu";
+@import "components/article";
+@import "components/footer";
