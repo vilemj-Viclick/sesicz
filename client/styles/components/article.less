@@ -5,6 +5,7 @@
     margin-bottom: 15px;
     border-bottom: #8a0000 solid 2px;
 
+    text-align: left;
     color: @red;
     font-size: 36px;
     font-family: Cambria serif;
@@ -24,10 +25,34 @@
       margin-bottom: 5px;
     }
 
+    h4 {
+      font-weight: 600;
+      text-decoration: underline;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: @red;
+      text-decoration: underline;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
     ul,
     p {
       margin-top: 5px;
       margin-bottom: 5px;
+    }
+
+    figure {
+      width: 600px;
+    }
+
+    img {
+      width: 600px;
     }
   }
 }

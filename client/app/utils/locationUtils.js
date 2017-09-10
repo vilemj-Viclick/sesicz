@@ -1,3 +1,3 @@
 export function getCurrentLocation() {
-  return location.hash;
+  return location.hash || '#uvod';
 }
