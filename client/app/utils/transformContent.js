@@ -94,6 +94,21 @@ function createMenuItemTransformer(transformPage) {
   };
 }
 
+function createGalleryItemTransformer() {
+  return ({ elements, system }, parentLocation) => {
+    const slug = elements.cesta_v_adresnim_radku.value;
+    const path = getPath(parentLocation, slug);
+    return {
+      id: system.id,
+      type: system.type,
+      linkPath: path,
+      title: elements.nazev_galerie.value,
+      images: elements.obrazky.value,
+      subPages: [],
+    };
+  };
+}
+
 function createPageTransformer(items, modularContent, transformerFactories) {
   const transformers = {};
 
@@ -117,6 +132,7 @@ function createPageTransformer(items, modularContent, transformerFactories) {
 const transformerFactoryByContentType = {
   clanek: createArticleTransformer,
   polozka_v_hornim_menu: createMenuItemTransformer,
+  galerie: createGalleryItemTransformer,
 };
 
 export function transformContent(contentResponse) {

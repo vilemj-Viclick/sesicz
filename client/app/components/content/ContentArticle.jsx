@@ -35,7 +35,7 @@ export class ContentArticle extends PureComponent {
     const { item } = this.props;
 
     return (
-      <div className="arcticle">
+      <div className="article">
         <h2
           className={classNames('article__title', {
             'article__title--has-children': item.subPages.length > 0,

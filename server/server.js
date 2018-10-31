@@ -102,6 +102,7 @@ function runApp() {
   });
 
   app.listen(Port);
+  console.log(`Listening on port '${Port}'.`);
 }
 
 compileClientJs().then(

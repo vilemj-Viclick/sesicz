@@ -13,7 +13,7 @@ export class SubMenuItem extends PureComponent {
 
   render() {
     const { item, currentLocation } = this.props;
-    const isSelected = currentLocation.startsWith(item.linkPath);
+    const isSelected = currentLocation === item.linkPath || currentLocation.startsWith(item.linkPath + '/');
     const subItems = item.subPages;
 
     return (

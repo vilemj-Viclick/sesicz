@@ -28,6 +28,7 @@
 		"postcss-loader": "^2.0.6",
 		"react": "^15.6.1",
 		"react-dom": "^15.6.1",
+		"react-image-lightbox": "^5.0.0",
 		"react-proptypes": "^1.0.0",
 		"style-loader": "^0.18.2",
 		"webpack": "^3.5.5"

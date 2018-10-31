@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 import PropTypes from 'react-proptypes';
 import { ContentArticle } from './ContentArticle';
+import { ContentGallery } from './ContentGallery';
 
 export class ContentCell extends PureComponent {
   static propTypes = {
@@ -18,13 +19,38 @@ export class ContentCell extends PureComponent {
       items;
     return (
       <td className="inner-table__content-cell">
-        {itemsToRender.map(item => (
-          <ContentArticle
-            key={item.linkPath}
-            currentLocation={currentLocation}
-            item={item}
-          />
-        ))}
+        {itemsToRender.map(item => {
+          switch (item.type) {
+            case 'clanek': {
+              return (
+                <ContentArticle
+                  key={item.linkPath}
+                  currentLocation={currentLocation}
+                  item={item}
+                />
+              );
+            }
+            case 'galerie': {
+              return (
+                <ContentGallery
+                  key={item.linkPath}
+                  currentLocation={currentLocation}
+                  item={item}
+                />
+              );
+            }
+            default: {
+              return (
+                <div>
+                  Don't know how to render: <br />
+                  <div>
+                    {JSON.stringify(item)}
+                  </div>
+                </div>
+              );
+            }
+          }
+        })}
       </td>
     );
   }
