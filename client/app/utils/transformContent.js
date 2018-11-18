@@ -1,3 +1,5 @@
+import { transformArticleText } from './transformArticleText';
+
 const getLinkRegex = (guid) =>
   new RegExp(
     `<a [^>]*data-item-id="(${guid || '[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}'})" [^>]*>`,
@@ -73,7 +75,7 @@ function createArticleTransformer(transformPage) {
       id: system.id,
       type: system.type,
       linkPath: path,
-      text: elements.text.value,
+      text: transformArticleText(elements.text.value),
       title: elements.titulek.value,
       subPages: elements.podstranky.value.map(itemCodeName => transformPage(itemCodeName, parentLocation.concat([slug]))),
     };

@@ -86,7 +86,7 @@ export class ContentGallery extends PureComponent {
             >
               <img
                 className="gallery__image"
-                src={image.url}
+                src={`${image.url}?h=200`}
                 alt={image.description}
                 title={image.description}
               />
